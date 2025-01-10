@@ -21,9 +21,10 @@ mcp = FastMCP(MCP_SERVER_NAME, dependencies=deps)
 
 
 @mcp.tool(name="list_news", description="List all latest market news")
-def list_news(category: str = "general", min_id: int = 0):
-    logger.info(f"Fetching {category} news with min_id: {min_id}")
-    return finnhub_client.general_news(category, min_id)
+def list_news(category: str = "general", count: int = 10):
+    logger.info(f"Fetching {category} news")
+    news =  finnhub_client.general_news(category)
+    return news[:count]
 
 
 @mcp.tool(name="get_market_data", description="Get market data for a given stock")
