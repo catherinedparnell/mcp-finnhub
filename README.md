@@ -1,4 +1,5 @@
 # Finnhub MCP Server
+[![smithery badge](https://smithery.ai/badge/mcp-finnhub)](https://smithery.ai/server/mcp-finnhub)
 
 An MCP server to interface with Finnhub API.
 
@@ -21,6 +22,15 @@ An MCP server to interface with Finnhub API.
 
 ## Configuration
 
+### Installing via Smithery
+
+To install Finnhub for Claude Desktop automatically via [Smithery](https://smithery.ai/server/mcp-finnhub):
+
+```bash
+npx -y @smithery/cli install mcp-finnhub --client claude
+```
+
+### Installing Manually
 1. Run `uv sync` to install the dependencies. To install `uv` follow the instructions [here](https://docs.astral.sh/uv/). Then do `source .venv/bin/activate`.
 
 2. Setup the `.env` file with the Finnhub API Key credentials.
